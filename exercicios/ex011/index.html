@@ -12,17 +12,17 @@
 </head>
 <body>
     <h1>Teste de Nacionalidade</h1>
-    <input type="text" name="txtn1" id="txtn1">
+    <input type="text" name="txtn1" id="txtn1" minlength="3" maxlength="15" required placeholder="Seu país">
     <input type="button" value="Checar" onclick="consultar()">
     <div id="msg"></div>
     <div id="Resultado"></div>
 
     <script>
         function consultar() {
-            let Brasil = 'Brasil'
-            let txtbr = window.document.getElementById('txtn1')
-            let msg = document.getElementById('msg')
-            let pais = (txtbr.value)
+            Brasil = 'Brasil'
+            txtbr = window.document.getElementById('txtn1')
+            msg = window.document.getElementById('msg')
+            pais = (txtbr.value)
             msg.innerHTML = `<p>Você tem nacionalidade da(o): <strong>${pais}.</strong></p>`
 
         if(Brasil == pais) {
